@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0d0d">
+  <meta name="description" content="Affiliate Kingdom portfolio operating dashboard">
+  <title>Affiliate Kingdom · Portfolio OS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Affiliate Kingdom overview">
+        <span class="brand-mark">AK</span>
+        <span><strong>Affiliate</strong><em>Kingdom</em></span>
+      </a>
+
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item is-active" data-view="overview">
+          <span class="nav-icon">◫</span><span>Overview</span>
+        </button>
+        <button class="nav-item" data-view="portfolio">
+          <span class="nav-icon">◆</span><span>20-site portfolio</span><b>20</b>
+        </button>
+        <button class="nav-item" data-view="vault">
+          <span class="nav-icon">⌕</span><span>Niche vault</span><b>350</b>
+        </button>
+        <button class="nav-item" data-view="roadmap">
+          <span class="nav-icon">↗</span><span>Roadmap</span>
+        </button>
+        <button class="nav-item" data-view="command">
+          <span class="nav-icon">◎</span><span>Command center</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-rule"></div>
+      <div class="system-card">
+        <span class="eyebrow">Operating rule</span>
+        <strong>Maximum 3 active builds</strong>
+        <p>Finish, launch, measure. Then open the next slot.</p>
+        <div class="slot-meter" aria-label="Active build capacity">
+          <span class="slot is-filled"></span><span class="slot"></span><span class="slot"></span>
+        </div>
+      </div>
+
+      <div class="sidebar-actions">
+        <button class="text-button" id="exportButton">Export state</button>
+        <label class="text-button" for="importInput">Import state</label>
+        <input id="importInput" type="file" accept="application/json" hidden>
+        <button class="text-button danger-text" id="resetButton">Reset local data</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div>
+          <span class="eyebrow" id="viewEyebrow">Portfolio control</span>
+          <h1 id="viewTitle">Overview</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="sync-state"><i></i><span>Saved locally</span></div>
+          <button class="primary-button" id="quickUpdate">Update progress</button>
+        </div>
+      </header>
+
+      <section class="view is-visible" id="overviewView" data-view-panel="overview">
+        <div class="hero-grid">
+          <article class="hero-card panel-dark">
+            <div class="hero-copy">
+              <span class="eyebrow light">Portfolio thesis · 2026</span>
+              <h2>Build proof.<br><span>Then build the kingdom.</span></h2>
+              <p>One publishing system. Twenty independent brands. Expensive decisions, recurring accessories, obsessive buyers, and a ruthless process for stopping weak ideas early.</p>
+              <div class="hero-actions">
+                <button class="primary-button light-button" data-jump="portfolio">Open portfolio</button>
+                <button class="ghost-button" data-jump="roadmap">View the build order</button>
+              </div>
+            </div>
+            <div class="hero-score">
+              <span class="score-label">Kingdom readiness</span>
+              <div class="score-ring" id="readinessRing"><strong id="readinessScore">8</strong><span>%</span></div>
+              <small>Based on validated, launched, and scaled sites</small>
+            </div>
+          </article>
+
+          <article class="focus-card panel-accent">
+            <span class="eyebrow">Right now</span>
+            <div class="focus-number">01</div>
+            <h3>Prove the machine on Coffeedant</h3>
+            <p>Finish migration, templates, product data, conversion modules, and the publishing workflow before multiplying complexity.</p>
+            <div class="focus-footer">
+              <span>Current flagship</span>
+              <button class="circle-button" data-site-open="coffeedant" aria-label="Open Coffeedant details">↗</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="metric-grid" id="overviewMetrics"></div>
+
+        <div class="overview-columns">
+          <section class="panel ranking-panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">The front line</span><h3>Highest-EV sites</h3></div>
+              <button class="text-button" data-jump="portfolio">See all 20</button>
+            </div>
+            <div id="topSites"></div>
+          </section>
+
+          <section class="panel next-panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Execution queue</span><h3>Next five moves</h3></div>
+              <span class="tiny-badge">Live</span>
+            </div>
+            <ol class="next-list" id="nextActions"></ol>
+          </section>
+        </div>
+
+        <section class="panel wave-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Controlled expansion</span><h3>Six-stage portfolio release</h3></div>
+            <p class="panel-note">The destination is 20 sites. The constraint is evidence.</p>
+          </div>
+          <div class="wave-strip" id="waveStrip"></div>
+        </section>
+
+        <section class="principle-grid">
+          <article><span>01</span><h3>Audience over product</h3><p>Own a costly decision journey, not one SKU that can disappear next quarter.</p></article>
+          <article><span>02</span><h3>Ecosystem economics</h3><p>Hardware wins the click. Accessories, upgrades, consumables, and adjacent purchases create lifetime value.</p></article>
+          <article><span>03</span><h3>Evidence before scale</h3><p>Every site earns the next batch through rankings, affiliate clicks, community traction, or direct revenue.</p></article>
+        </section>
+      </section>
+
+      <section class="view" id="portfolioView" data-view-panel="portfolio">
+        <div class="section-intro">
+          <div><span class="eyebrow">The portfolio</span><h2>Twenty focused properties.<br>One shared engine.</h2></div>
+          <p>Scores are directional hypotheses, not truth. Validation should change the order.</p>
+        </div>
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="siteSearch" type="search" placeholder="Search sites or clusters"></label>
+          <select id="siteWaveFilter" aria-label="Filter by wave"><option value="all">All waves</option></select>
+          <select id="siteStageFilter" aria-label="Filter by stage"><option value="all">All stages</option></select>
+          <select id="siteSort" aria-label="Sort sites">
+            <option value="score">Highest score</option>
+            <option value="wave">Build order</option>
+            <option value="progress">Most progress</option>
+          </select>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+      </section>
+
+      <section class="view" id="vaultView" data-view-panel="vault">
+        <div class="section-intro compact-intro">
+          <div><span class="eyebrow">Research database</span><h2>350 high-ticket niches</h2></div>
+          <p>Seven research batches normalized into one filterable idea bank. Shortlist only what strengthens a focused site.</p>
+        </div>
+        <div class="vault-summary" id="vaultSummary"></div>
+        <div class="toolbar vault-toolbar">
+          <label class="search-box wide"><span>⌕</span><input id="nicheSearch" type="search" placeholder="Search products, categories, or audiences"></label>
+          <select id="categoryFilter" aria-label="Filter by category"><option value="all">All categories</option></select>
+          <select id="potentialFilter" aria-label="Filter by potential">
+            <option value="all">All potential</option><option value="5">5-star only</option><option value="4">4 stars +</option>
+          </select>
+          <select id="fitFilter" aria-label="Filter by site fit"><option value="all">All site fits</option><option value="unassigned">Unassigned ideas</option></select>
+          <select id="nicheSort" aria-label="Sort niches">
+            <option value="potential">Potential</option><option value="ticket">Highest ticket</option><option value="category">Category A–Z</option><option value="id">Research order</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>#</th><th>Category</th><th>Product niche</th><th>Typical ticket</th><th>Potential</th><th>Best site fit</th><th></th></tr></thead>
+            <tbody id="nicheTableBody"></tbody>
+          </table>
+        </div>
+        <div class="table-footer"><span id="nicheCount"></span><button class="secondary-button" id="loadMoreNiches">Load 50 more</button></div>
+      </section>
+
+      <section class="view" id="roadmapView" data-view-panel="roadmap">
+        <div class="section-intro">
+          <div><span class="eyebrow">Release plan</span><h2>Build in waves.<br>Keep the right to stop.</h2></div>
+          <p>The two-week sprint builds the system and validates candidates. It does not justify publishing nineteen hollow websites.</p>
+        </div>
+        <div class="roadmap-layout">
+          <div class="roadmap-rail" id="roadmapRail"></div>
+          <aside class="panel gate-panel">
+            <span class="eyebrow">Gate system</span>
+            <h3>No site moves forward on enthusiasm.</h3>
+            <div class="gate-list">
+              <div><b>01</b><span><strong>Validate</strong>Demand, SERP weakness, offers, communities, purchase ladder.</span></div>
+              <div><b>02</b><span><strong>Build</strong>30-page launch map, evidence plan, template coverage, internal links.</span></div>
+              <div><b>03</b><span><strong>Launch</strong>Indexation, affiliate tracking, distribution, feedback loops.</span></div>
+              <div><b>04</b><span><strong>Scale or hold</strong>Invest only when early rankings, clicks, or revenue justify it.</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="commandView" data-view-panel="command">
+        <div class="section-intro compact-intro">
+          <div><span class="eyebrow">Operating room</span><h2>Command center</h2></div>
+          <p>Update portfolio KPIs, identify blocked work, and choose the next action without another planning session.</p>
+        </div>
+        <div class="command-grid">
+          <section class="panel command-focus">
+            <div class="panel-heading"><div><span class="eyebrow">This week</span><h3>Critical path</h3></div></div>
+            <div id="criticalPath"></div>
+          </section>
+          <section class="panel kill-panel">
+            <span class="eyebrow">Capital discipline</span>
+            <h3>Hold and kill rules</h3>
+            <ul>
+              <li><strong>Do not launch</strong> without 25 commercial query clusters and three viable offer paths.</li>
+              <li><strong>Hold after 90 days</strong> if there are no top-20 keywords, useful affiliate clicks, or community traction.</li>
+              <li><strong>Fix intent</strong> if 100 affiliate clicks create zero conversions before adding more pages.</li>
+              <li><strong>Scale</strong> when at least three money pages reach page one or revenue per 1,000 visits clears the target.</li>
+            </ul>
+          </section>
+        </div>
+        <section class="panel kpi-panel">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Portfolio ledger</span><h3>Live performance inputs</h3></div>
+            <p class="panel-note">Click any value to update it. Changes stay in this browser.</p>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table command-table">
+              <thead><tr><th>Site</th><th>Stage</th><th>Pages</th><th>Visits / mo</th><th>Affiliate clicks</th><th>Revenue / mo</th><th>RPM</th><th>Next action</th></tr></thead>
+              <tbody id="kpiTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="site-drawer" id="siteDrawer" aria-hidden="true">
+    <button class="drawer-close" id="drawerClose" aria-label="Close site details">×</button>
+    <div id="drawerContent"></div>
+  </aside>
+
+  <dialog id="resetDialog">
+    <form method="dialog">
+      <span class="eyebrow">Reset dashboard</span>
+      <h3>Remove all local progress?</h3>
+      <p>This resets site stages, notes, KPIs, and shortlist selections. The portfolio and research data remain.</p>
+      <div class="dialog-actions"><button value="cancel" class="secondary-button">Cancel</button><button value="confirm" class="danger-button">Reset everything</button></div>
+    </form>
+  </dialog>
+
+  <script src="data/catalog.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
