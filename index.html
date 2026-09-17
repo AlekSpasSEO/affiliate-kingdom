@@ -21,6 +21,14 @@
         <button class="nav-item is-active" data-view="overview">
           <span class="nav-icon">◫</span><span>Overview</span>
         </button>
+        <span class="nav-kicker">Active properties</span>
+        <button class="nav-item" data-view="coffeedant">
+          <span class="nav-icon">◉</span><span>Coffeedant</span><b>Build</b>
+        </button>
+        <button class="nav-item" data-view="justdaddit">
+          <span class="nav-icon">●</span><span>JustDaddit</span><b>New</b>
+        </button>
+        <span class="nav-kicker">Portfolio system</span>
         <button class="nav-item" data-view="portfolio">
           <span class="nav-icon">◆</span><span>20-site portfolio</span><b>20</b>
         </button>
@@ -39,9 +47,9 @@
       <div class="system-card">
         <span class="eyebrow">Operating rule</span>
         <strong>Maximum 3 active builds</strong>
-        <p>Finish, launch, measure. Then open the next slot.</p>
+        <p>Coffeedant is building. JustDaddit is validating. Keep the third slot closed.</p>
         <div class="slot-meter" aria-label="Active build capacity">
-          <span class="slot is-filled"></span><span class="slot"></span><span class="slot"></span>
+          <span class="slot is-filled"></span><span class="slot is-filled"></span><span class="slot"></span>
         </div>
       </div>
 
@@ -92,7 +100,7 @@
             <p>Finish migration, templates, product data, conversion modules, and the publishing workflow before multiplying complexity.</p>
             <div class="focus-footer">
               <span>Current flagship</span>
-              <button class="circle-button" data-site-open="coffeedant" aria-label="Open Coffeedant details">↗</button>
+              <button class="circle-button" data-jump="coffeedant" aria-label="Open Coffeedant dashboard">↗</button>
             </div>
           </article>
         </div>
@@ -130,6 +138,14 @@
           <article><span>02</span><h3>Ecosystem economics</h3><p>Hardware wins the click. Accessories, upgrades, consumables, and adjacent purchases create lifetime value.</p></article>
           <article><span>03</span><h3>Evidence before scale</h3><p>Every site earns the next batch through rankings, affiliate clicks, community traction, or direct revenue.</p></article>
         </section>
+      </section>
+
+      <section class="view site-operation-view" id="coffeedantView" data-view-panel="coffeedant">
+        <div id="coffeedantDashboard"></div>
+      </section>
+
+      <section class="view site-operation-view" id="justdadditView" data-view-panel="justdaddit">
+        <div id="justdadditDashboard"></div>
       </section>
 
       <section class="view" id="portfolioView" data-view-panel="portfolio">
@@ -249,6 +265,7 @@
   </dialog>
 
   <script src="data/catalog.js"></script>
+  <script src="data/site-operations.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

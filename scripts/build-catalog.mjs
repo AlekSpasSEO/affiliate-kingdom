@@ -30,7 +30,7 @@ const assignSite = (category, product) => {
     ['rv-systems', /rv |rv owners|overland|portable power|generator|off-grid|solar power/],
     ['serious-woodworking', /woodwork|track saw|router table|mortis|dust extractor/],
     ['car-tech', /car tech|dash ?cam|carplay|jump starter|tire inflator|radar detector/],
-    ['family-upgrade', /family|baby|grand|kids|child|nursery|stroller|car seat|playset|trampoline|ride-on|go-kart/],
+    ['justdaddit', /family|baby|grand|kids|child|nursery|stroller|car seat|playset|trampoline|ride-on|go-kart/],
     ['creator-studio', /creator|pro video|video production|camera support|studio lighting|podcast|photograph|cinema|microphone|teleprompter/],
     ['workshop-machines', /workshop|maker|metalwork|welder|plasma cutter|laser engraver|3d printer|heat press|milling machine|metal lathe/],
     ['classic-garage', /classic-car|classic car|automotive lift|garage air|detailing extractor|paint sprayer|diagnostic scanner/],
