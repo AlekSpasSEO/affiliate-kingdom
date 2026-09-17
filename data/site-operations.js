@@ -111,57 +111,59 @@ window.SITE_OPERATIONS = {
     id: 'justdaddit',
     name: 'JustDaddit',
     domain: 'justdaddit.com',
-    dashboardLabel: 'Validation and build plan',
-    stage: 'Validate',
-    status: 'Selected as site number two',
+    dashboardLabel: 'Build and launch control',
+    stage: 'Build',
+    status: 'Prototype built; repository needed for publication',
     statusTone: 'validate',
     lastVerified: 'September 17, 2026',
-    summary: 'A dad-led buying guide for expensive family gear that should make real life easier, safer, or more fun. The brand wins through honest family use, clear decision tools, and practical evidence rather than generic parenting content.',
-    objective: 'Validate one commercially strong family-gear wedge, publish a 30-page evidence-led launch, and earn the right to expand only after search, click, or revenue signals appear.',
+    summary: 'A candid, research-backed buying brand for family adventures, projects, travel, and outdoor play. Every page labels its evidence, calculates the first-weekend cost, and names who should skip the product.',
+    objective: 'Publish the approved 69-page US-first launch system: one homepage, five hubs, five comparisons, 50 research reviews, and eight trust or legal pages. Add hands-on evidence later without inventing it now.',
     links: [
       { label: 'Owned domain', href: 'https://justdaddit.com/' },
       { label: 'Name-risk reference', href: 'https://www.reddit.com/r/daddit/' },
       { label: 'Affiliate Kingdom', href: 'https://alekspasseo.github.io/affiliate-kingdom/' },
     ],
     metrics: [
-      { value: '57', label: 'Mapped product niches', note: 'Already assigned in the research vault' },
-      { value: '38', label: 'Five-star candidates', note: 'Directional research scores, not demand proof' },
-      { value: '8', label: '$2k+ opportunities', note: 'High-ticket candidates in the mapped set' },
-      { value: '30', label: 'Launch-page plan', note: 'Four tightly connected content clusters' },
-      { value: '0', label: 'Pages published', note: 'Research before production' },
+      { value: '69', label: 'Approved launch pages', note: '61 commercial and navigation pages plus eight trust and legal pages' },
+      { value: '6', label: 'Prototype pages built', note: 'Homepage, RC hub, benchmark review, comparison, About, and methodology' },
+      { value: '5', label: 'Approved launch hubs', note: 'RC, ride-ons, backyard play, camping, and roof cargo' },
+      { value: '4,004', label: 'Benchmark review words', note: 'Useful rendered depth, excluding code and hidden material' },
+      { value: '0', label: 'Pages published', note: 'Awaiting the empty justdaddit GitHub repository' },
     ],
     workstreams: [
-      { id: 'research', title: 'Market and competitor research', progress: 72, weight: 18, outcome: 'Audience, competitor set, monetization routes, and primary risks are mapped.', next: 'Add keyword and SERP evidence for the first 30 commercial queries.' },
-      { id: 'positioning', title: 'Positioning and brand clearance', progress: 36, weight: 17, outcome: 'The dad-tested family-gear direction and US-first market are selected; naming confusion remains un-cleared.', next: 'Run formal trademark clearance and add an independence statement before brand investment.' },
-      { id: 'architecture', title: 'Site and product data architecture', progress: 18, weight: 17, outcome: 'Four launch clusters and initial page types are defined.', next: 'Define product IDs, specs, evidence labels, retailer records, and content relationships.' },
-      { id: 'evidence', title: 'Testing and evidence system', progress: 8, weight: 18, outcome: 'The evidence ladder is defined, but no launch-product inventory has been logged.', next: 'Inventory owned family gear and recruit three family testers in the target market.' },
-      { id: 'build', title: 'Website and content production', progress: 0, weight: 20, outcome: 'No consumer site or launch pages exist yet.', next: 'Build the design system only after the first wedge and market are confirmed.' },
-      { id: 'monetization', title: 'Affiliate and measurement setup', progress: 6, weight: 10, outcome: 'Potential programs are mapped; approvals and event tracking are not active.', next: 'Apply to two direct programs plus Amazon only after the site has credible seed content.' },
+      { id: 'research', title: 'Market and competitor research', progress: 82, weight: 15, outcome: 'The US audience, five launch categories, model list, risks, and monetization routes are mapped.', next: 'Complete exact-product source ledgers for the remaining nine benchmark-batch products.' },
+      { id: 'positioning', title: 'Voice, brand, and founder identity', progress: 90, weight: 15, outcome: 'Voice, tone, vocabulary, evidence labels, founder identity, privacy boundary, and non-affiliation language are approved.', next: 'Run formal trademark clearance before paid identity work.' },
+      { id: 'architecture', title: 'Site and product architecture', progress: 68, weight: 15, outcome: 'The 69-page launch map, routes, components, metadata, sitemap, and internal-link pattern are defined.', next: 'Move product facts into structured records before batch production.' },
+      { id: 'evidence', title: 'Evidence and scoring system', progress: 72, weight: 20, outcome: 'Research Review, Owner-Verified, Hands-On, and Long-Term labels plus six scoring dimensions are documented.', next: 'Create the per-product source and claim ledger for the next nine reviews.' },
+      { id: 'build', title: 'Website and content production', progress: 28, weight: 25, outcome: 'Six-page Astro prototype builds and validates locally, including a 4,004-word benchmark review.', next: 'Create the empty GitHub repository, publish the prototype, and run desktop and mobile visual QA.' },
+      { id: 'monetization', title: 'Affiliate and measurement setup', progress: 8, weight: 10, outcome: 'US-first retailer strategy is mapped; no affiliate links or analytics are active in the prototype.', next: 'Add measurement events and apply only after credible seed content is public.' },
     ],
     actions: [
-      { id: 'domain-selected', priority: 'Done', title: 'Select JustDaddit as site number two', detail: 'The generic Family Upgrade placeholder is replaced across the portfolio.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
-      { id: 'market', priority: 'Done', title: 'Lock the launch market', detail: 'US-first English is confirmed, using USD pricing, Amazon US, and direct US programs.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
-      { id: 'gear-inventory', priority: 'P0', title: 'Inventory products the family can genuinely test', detail: 'List the RC cars, cameras, bikes, scooters, camping gear, travel products, tools, and family technology already available.', owner: 'Ace + Lucija', timing: 'This week' },
-      { id: 'clearance', priority: 'P0', title: 'Run formal name and trademark clearance', detail: 'The domain is owned, but Reddit is strongly associated with the term Daddit. This initial screen is not legal clearance.', owner: 'Ace', timing: 'Before logo spend' },
-      { id: 'wedge', priority: 'P0', title: 'Validate the family adventure wedge', detail: 'Score 30 SERPs across ride-and-haul, outdoor play, RC/build projects, and family travel systems.', owner: 'Codex', timing: 'This week' },
-      { id: 'testing-panel', priority: 'P1', title: 'Recruit three family testers', detail: 'Use families with children in different age bands. Record product ownership, photos, observations, and conflicts.', owner: 'Ace', timing: 'Before review production' },
-      { id: 'brand-system', priority: 'P1', title: 'Approve the identity and editorial promise', detail: 'Keep it practical, warm, and dad-led without macho stereotypes or excluding mothers and grandparents.', owner: 'Ace + Lucija', timing: 'After clearance' },
-      { id: 'data-model', priority: 'P1', title: 'Build the product and evidence data model', detail: 'Separate specifications, observed findings, owner reports, price snapshots, safety notices, and affiliate records.', owner: 'Codex', timing: 'Before site code' },
-      { id: 'site-mvp', priority: 'P1', title: 'Build the ten-page evidence MVP', detail: 'Launch a small working system first. Do not mass-publish the 30-page map before the templates pass review.', owner: 'Codex', timing: 'Build sprint' },
-      { id: 'distribution', priority: 'P2', title: 'Create the first distribution loop', detail: 'Turn each real family test into a useful article, email, short video, comparison asset, and internal-link update.', owner: 'Ace + Lucija', timing: 'At launch' },
+      { id: 'domain-selected', priority: 'Done', title: 'Select JustDaddit as site number two', detail: 'The domain and portfolio position are approved.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
+      { id: 'market', priority: 'Done', title: 'Lock the launch market', detail: 'US-first English, USD, Amazon US, and direct US programs.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
+      { id: 'hubs-approved', priority: 'Done', title: 'Approve the five launch hubs', detail: 'RC cars, ride-ons, backyard play, family camping, and roof cargo.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
+      { id: 'identity-approved', priority: 'Done', title: 'Approve public founder identity', detail: 'Use Aleksandar Spasevski, portrait, and father/founder biography while keeping children private.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
+      { id: 'brand-system', priority: 'Done', title: 'Create the brand and editorial system', detail: 'Voice, tone, vocabulary, evidence labels, scoring, images, affiliate rules, and page structures are documented.', owner: 'Codex', timing: 'Complete', defaultComplete: true },
+      { id: 'prototype', priority: 'Done', title: 'Build the six-page prototype', detail: 'Homepage, RC hub, benchmark review, comparison, About, and methodology pass deterministic validation.', owner: 'Codex', timing: 'Complete', defaultComplete: true },
+      { id: 'repository', priority: 'P0', title: 'Create the empty public justdaddit repository', detail: 'The connected GitHub app can populate repositories but cannot create a new one.', owner: 'Ace', timing: 'Now' },
+      { id: 'publish-qa', priority: 'P0', title: 'Publish and visually QA the prototype', detail: 'Push the Astro project, enable GitHub Pages, inspect desktop and mobile, and fix render issues.', owner: 'Codex', timing: 'After repository exists' },
+      { id: 'clearance', priority: 'P0', title: 'Run formal name and trademark clearance', detail: 'Keep the Reddit non-affiliation statement and clear the name before significant brand spend.', owner: 'Ace', timing: 'Before logo spend' },
+      { id: 'product-data', priority: 'P1', title: 'Create structured records for the first ten products', detail: 'Exact model, generation, region, specs, claims, manuals, parts, recalls, images, and retailer records.', owner: 'Codex', timing: 'Next batch' },
+      { id: 'first-ten', priority: 'P1', title: 'Build the first ten reviews and five comparisons', detail: 'Use the approved benchmark structure, then audit before producing the remaining forty reviews.', owner: 'Codex', timing: 'After prototype approval' },
     ],
     blockers: [
-      { level: 'Critical', title: 'Name confusion has not been cleared', detail: 'Daddit is the established name of a large Reddit fatherhood community. Use a clear non-affiliation statement and get legal clearance before significant brand spend.' },
-      { level: 'High', title: 'Original evidence inventory is unknown', detail: 'A product site without first-hand or clearly labeled independent evidence will be another generic affiliate property.' },
-      { level: 'Medium', title: 'The concept can drift into generic parenting', detail: 'The launch rule is strict: cover expensive decisions and repeat-use family systems, not broad parenting advice.' },
+      { level: 'Critical', title: 'The GitHub repository does not exist', detail: 'Create one empty public repository named justdaddit. The completed local prototype cannot be published until the remote exists.' },
+      { level: 'High', title: 'Name confusion has not been formally cleared', detail: 'Daddit is closely associated with Reddit fatherhood. The prototype states non-affiliation, but legal clearance is still required before significant brand spend.' },
+      { level: 'Medium', title: 'Visual browser QA is incomplete', detail: 'The production build and deterministic checks pass, but the managed render session stalled. Complete desktop and mobile visual inspection after publication.' },
     ],
     decisions: [
-      { id: 'market', title: 'Primary market', recommendation: 'US-first English, USD pricing, Amazon US, and direct US affiliate programs.', status: 'Approved', impact: 'Controls retailer programs, currency, keyword research, compliance, and product availability.' },
-      { id: 'audience', title: 'Starting family stage', recommendation: 'Families with children roughly 3-12.', status: 'Recommended', impact: 'Matches the products and evidence you can access now.' },
-      { id: 'wedge', title: 'Opening commercial wedge', recommendation: 'Family adventure, ride-and-haul gear, outdoor play, and build-together projects.', status: 'Recommended', impact: 'Creates a coherent launch without trapping the brand in baby gear.' },
-      { id: 'brand-breadth', title: 'Broader brand story', recommendation: 'Keep family-life and dadpreneur stories as a later journal layer, not a launch category.', status: 'Recommended', impact: 'Preserves the original JustDaddit identity without diluting early topical focus.' },
-      { id: 'identity', title: 'Public identity', recommendation: 'Dad-led and personal, with optional faceless child coverage and no invented testing persona.', status: 'Open', impact: 'Determines trust, photography, video, and About-page credibility.' },
-      { id: 'reddit', title: 'Reddit relationship', recommendation: 'Never imply affiliation and do not use r/daddit for promotion.', status: 'Required', impact: 'Reduces naming, reputation, and community-policy risk.' },
+      { id: 'market', title: 'Primary market', recommendation: 'US-first English, USD pricing, Amazon US, and direct US affiliate programs.', status: 'Approved', impact: 'Controls currency, products, retailers, compliance, and research.' },
+      { id: 'audience', title: 'Starting family stage', recommendation: 'US families with children roughly 4-12.', status: 'Approved', impact: 'Avoids a baby-heavy launch and matches the selected activities.' },
+      { id: 'wedge', title: 'Five launch hubs', recommendation: 'RC cars, go-karts and ride-ons, backyard play, family camping tents, and roof cargo boxes.', status: 'Approved', impact: 'Defines all 61 requested commercial and navigation pages.' },
+      { id: 'identity', title: 'Public founder identity', recommendation: 'Use real name, portrait, and father/founder biography while keeping children private.', status: 'Approved', impact: 'Controls author schema, About copy, photography, and trust.' },
+      { id: 'evidence-model', title: 'Initial evidence model', recommendation: 'Publish clearly labeled Research Reviews now; never imply hands-on testing.', status: 'Approved', impact: 'Allows launch without owning products while preserving credibility.' },
+      { id: 'brand-breadth', title: 'Broader brand story', recommendation: 'Keep family-life and dadpreneur stories as a later journal layer.', status: 'Approved', impact: 'Preserves founder depth without diluting launch focus.' },
+      { id: 'reddit', title: 'Reddit relationship', recommendation: 'State non-affiliation and never use r/daddit for promotion.', status: 'Required', impact: 'Reduces naming and reputation risk.' },
     ],
     research: {
       verdict: 'Proceed with validation. The concept has commercial depth and authentic founder fit, but the name needs clearance and the site needs a narrower opening than “everything dads buy.”',
@@ -217,36 +219,627 @@ window.SITE_OPERATIONS = {
       { id: 'j5', label: 'Phase 5', timing: 'Day 90 review', title: 'Scale, narrow, or hold', deliverables: ['Performance review', 'Winning cluster expansion', 'Weak-page consolidation', 'Next 30-page decision'], gate: 'Do not scale a weak thesis simply because the publishing system is fast.' },
     ],
     content: [
-      { id: 'jd-01', cluster: 'Ride and haul', title: 'Best stroller wagons for two older kids', type: 'Buying guide', intent: 'Commercial', evidence: 'Family test panel + measurements', status: 'Brief' },
-      { id: 'jd-02', cluster: 'Ride and haul', title: 'WonderFold W4 vs Veer Cruiser XL', type: 'Comparison', intent: 'High commercial', evidence: 'Product access required', status: 'Research' },
-      { id: 'jd-03', cluster: 'Ride and haul', title: 'What stroller wagon size actually fits your trunk?', type: 'Decision tool', intent: 'Commercial support', evidence: 'Vehicle and folded-size data', status: 'Idea' },
-      { id: 'jd-04', cluster: 'Ride and haul', title: 'Best stroller wagons for sand and rough ground', type: 'Buying guide', intent: 'Commercial', evidence: 'Terrain test + owner panel', status: 'Idea' },
-      { id: 'jd-05', cluster: 'Ride and haul', title: 'Best double bike trailers for family rides', type: 'Buying guide', intent: 'Commercial', evidence: 'Family test panel + safety docs', status: 'Idea' },
-      { id: 'jd-06', cluster: 'Ride and haul', title: 'Thule Chariot vs Burley D’Lite X', type: 'Comparison', intent: 'High commercial', evidence: 'Product access required', status: 'Idea' },
-      { id: 'jd-07', cluster: 'Ride and haul', title: 'Cargo bike or bike trailer for two children?', type: 'Decision guide', intent: 'Commercial', evidence: 'Use-case model + expert review', status: 'Idea' },
-      { id: 'jd-08', cluster: 'Family travel', title: 'Best roof cargo boxes for a family of four', type: 'Buying guide', intent: 'High commercial', evidence: 'Vehicle-fit data + loading tests', status: 'Idea' },
-      { id: 'jd-09', cluster: 'Family travel', title: 'Roof box size calculator for family road trips', type: 'Decision tool', intent: 'Commercial support', evidence: 'Dimensions + luggage scenarios', status: 'Idea' },
-      { id: 'jd-10', cluster: 'Family travel', title: 'The family road-trip cargo system', type: 'System guide', intent: 'Commercial support', evidence: 'Real packing workflow', status: 'Idea' },
-      { id: 'jd-11', cluster: 'Outdoor play', title: 'Best electric go-karts for children 6-10', type: 'Buying guide', intent: 'High commercial', evidence: 'Age-fit + speed + safety data', status: 'Idea' },
-      { id: 'jd-12', cluster: 'Outdoor play', title: 'Razor Crazy Cart models compared', type: 'Comparison', intent: 'Commercial', evidence: 'Model data + rider panel', status: 'Idea' },
-      { id: 'jd-13', cluster: 'Build together', title: 'Best RC car for a six-year-old who will crash it', type: 'Buying guide', intent: 'Commercial', evidence: 'Owned-product testing', status: 'Brief' },
-      { id: 'jd-14', cluster: 'Build together', title: 'How I burned an RC car battery trying to make it faster', type: 'Experience guide', intent: 'Informational to commercial', evidence: 'First-hand story + safety review', status: 'Brief' },
-      { id: 'jd-15', cluster: 'Build together', title: 'The repairable RC car buying checklist for parents', type: 'Decision guide', intent: 'Commercial', evidence: 'Parts and repairability audit', status: 'Idea' },
-      { id: 'jd-16', cluster: 'Outdoor play', title: 'What trampoline size works for two children?', type: 'Decision guide', intent: 'Commercial', evidence: 'Space, age, and safety data', status: 'Idea' },
-      { id: 'jd-17', cluster: 'Outdoor play', title: 'Premium playset or modular backyard build?', type: 'Comparison', intent: 'High commercial', evidence: 'Cost model + installer input', status: 'Idea' },
-      { id: 'jd-18', cluster: 'Outdoor play', title: 'Best scooters for mixed-age siblings', type: 'Buying guide', intent: 'Commercial', evidence: 'Fit and handling panel', status: 'Idea' },
-      { id: 'jd-19', cluster: 'Build together', title: 'Best first 3D printer for a parent and child', type: 'Buying guide', intent: 'High commercial', evidence: 'Project testing + safety docs', status: 'Idea' },
-      { id: 'jd-20', cluster: 'Build together', title: 'Bambu Lab A1 Mini for family projects', type: 'Review', intent: 'Commercial', evidence: 'Product access required', status: 'Idea' },
-      { id: 'jd-21', cluster: 'Creative tech', title: 'Best real camera for children ages 4-7', type: 'Buying guide', intent: 'Commercial', evidence: 'Child-use panel + parent controls', status: 'Idea' },
-      { id: 'jd-22', cluster: 'Creative tech', title: 'Yoto Player vs Toniebox for family routines', type: 'Comparison', intent: 'High commercial', evidence: 'Routine test + catalog economics', status: 'Idea' },
-      { id: 'jd-23', cluster: 'Creative tech', title: 'Best screen-light audio player for travel', type: 'Buying guide', intent: 'Commercial', evidence: 'Travel use + battery testing', status: 'Idea' },
-      { id: 'jd-24', cluster: 'Creative tech', title: 'Best drawing tablet for a creative child', type: 'Buying guide', intent: 'Commercial', evidence: 'Age-fit + software + parent setup', status: 'Idea' },
-      { id: 'jd-25', cluster: 'Family memory', title: 'Best family camera when a phone is not enough', type: 'Buying guide', intent: 'High commercial', evidence: 'Lucija-led camera testing', status: 'Idea' },
-      { id: 'jd-26', cluster: 'Family camping', title: 'Best family camping tents for four people', type: 'Buying guide', intent: 'High commercial', evidence: 'Setup + weather + packing panel', status: 'Idea' },
-      { id: 'jd-27', cluster: 'Family camping', title: 'Blackout tent or standard tent with children?', type: 'Comparison', intent: 'Commercial', evidence: 'Sleep and temperature test', status: 'Idea' },
-      { id: 'jd-28', cluster: 'Family camping', title: 'A sleep system that gets two children through the night', type: 'System guide', intent: 'Commercial support', evidence: 'Real family setup', status: 'Idea' },
-      { id: 'jd-29', cluster: 'Family camping', title: 'Best portable power stations for family camping', type: 'Buying guide', intent: 'High commercial', evidence: 'Load scenarios + safety docs', status: 'Idea' },
-      { id: 'jd-30', cluster: 'Family travel', title: 'Best coolers for day trips and family weekends', type: 'Buying guide', intent: 'Commercial', evidence: 'Capacity + ice-retention test', status: 'Idea' },
+          {
+                "id": "jd-home",
+                "cluster": "Site",
+                "title": "JustDaddit homepage",
+                "type": "Homepage",
+                "intent": "Navigation",
+                "evidence": "Brand and decision system",
+                "status": "Built"
+          },
+          {
+                "id": "jd-hub-1",
+                "cluster": "RC",
+                "title": "RC Cars for Parents and Kids",
+                "type": "Hub",
+                "intent": "Commercial",
+                "evidence": "Category research and decision framework",
+                "status": "Built"
+          },
+          {
+                "id": "jd-hub-2",
+                "cluster": "Go-Karts",
+                "title": "Go-Karts and Ride-Ons",
+                "type": "Hub",
+                "intent": "Commercial",
+                "evidence": "Category research and decision framework",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-hub-3",
+                "cluster": "Backyard",
+                "title": "Backyard Play Systems",
+                "type": "Hub",
+                "intent": "Commercial",
+                "evidence": "Category research and decision framework",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-hub-4",
+                "cluster": "Family",
+                "title": "Family Camping Tents",
+                "type": "Hub",
+                "intent": "Commercial",
+                "evidence": "Category research and decision framework",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-hub-5",
+                "cluster": "Roof",
+                "title": "Roof Cargo Boxes for Family Trips",
+                "type": "Hub",
+                "intent": "Commercial",
+                "evidence": "Category research and decision framework",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-compare-1",
+                "cluster": "RC cars",
+                "title": "Traxxas Slash 4X4 VXL vs ARRMA Senton 223S BLX",
+                "type": "Comparison",
+                "intent": "High commercial",
+                "evidence": "Research comparison, exact models, dated claims",
+                "status": "Built"
+          },
+          {
+                "id": "jd-compare-2",
+                "cluster": "Ride-ons",
+                "title": "Razor Crazy Cart XL vs Crazy Cart Sport",
+                "type": "Comparison",
+                "intent": "High commercial",
+                "evidence": "Research comparison, exact models, dated claims",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-compare-3",
+                "cluster": "Backyard play",
+                "title": "ACON 16 HD Pro vs Springfree Large Oval",
+                "type": "Comparison",
+                "intent": "High commercial",
+                "evidence": "Research comparison, exact models, dated claims",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-compare-4",
+                "cluster": "Family camping",
+                "title": "Gazelle T4 Plus vs CORE 9-Person Instant Cabin",
+                "type": "Comparison",
+                "intent": "High commercial",
+                "evidence": "Research comparison, exact models, dated claims",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-compare-5",
+                "cluster": "Roof cargo",
+                "title": "Thule Motion 3 XL vs Yakima SkyBox NX XL",
+                "type": "Comparison",
+                "intent": "High commercial",
+                "evidence": "Research comparison, exact models, dated claims",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-01",
+                "cluster": "RC cars",
+                "title": "Traxxas Slash 4X4 VXL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Built"
+          },
+          {
+                "id": "jd-review-02",
+                "cluster": "RC cars",
+                "title": "Traxxas Rustler 4X4 VXL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-03",
+                "cluster": "RC cars",
+                "title": "Traxxas Mini Maxx review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-04",
+                "cluster": "RC cars",
+                "title": "Traxxas TRX-4 Sport review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-05",
+                "cluster": "RC cars",
+                "title": "ARRMA Senton 223S BLX 4X4 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-06",
+                "cluster": "RC cars",
+                "title": "ARRMA Granite 223S BLX 4X4 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-07",
+                "cluster": "RC cars",
+                "title": "ARRMA Typhon Grom 4X4 RTR review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-08",
+                "cluster": "RC cars",
+                "title": "Losi Mini-T 2.0 Brushless review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-09",
+                "cluster": "RC cars",
+                "title": "Axial SCX24 Jeep Wrangler JLU review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-10",
+                "cluster": "RC cars",
+                "title": "Redcat Ascent-18 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-11",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Segway GoKart Pro 2 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-12",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Razor Crazy Cart XL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-13",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Razor Crazy Cart Sport review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-14",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Razor Crazy Cart Shift review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-15",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Razor Ground Force Elite review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-16",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Razor Dune Buggy review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-17",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Radio Flyer Ultimate Go-Kart for 2 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-18",
+                "cluster": "Go-karts and ride-ons",
+                "title": "Radio Flyer Extreme Drift Go-Kart review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-19",
+                "cluster": "Go-karts and ride-ons",
+                "title": "BERG Buddy B-Orange review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-20",
+                "cluster": "Go-karts and ride-ons",
+                "title": "BERG Rally APX Red 3 Gears review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-21",
+                "cluster": "Backyard play",
+                "title": "Springfree Medium Oval review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-22",
+                "cluster": "Backyard play",
+                "title": "Springfree Large Oval review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-23",
+                "cluster": "Backyard play",
+                "title": "ACON Air 15 ft Gen 2 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-24",
+                "cluster": "Backyard play",
+                "title": "ACON 16 HD Pro review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-25",
+                "cluster": "Backyard play",
+                "title": "Vuly Thunder 2 Pro review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-26",
+                "cluster": "Backyard play",
+                "title": "Backyard Discovery Skyfort II review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-27",
+                "cluster": "Backyard play",
+                "title": "Backyard Discovery Skyfort III review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-28",
+                "cluster": "Backyard play",
+                "title": "Backyard Discovery Canyon Creek review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-29",
+                "cluster": "Backyard play",
+                "title": "Gorilla Playsets Chateau Tower review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-30",
+                "cluster": "Backyard play",
+                "title": "Lifetime Adventure Castle review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-31",
+                "cluster": "Family camping",
+                "title": "Gazelle T4 Hub review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-32",
+                "cluster": "Family camping",
+                "title": "Gazelle T4 Plus review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-33",
+                "cluster": "Family camping",
+                "title": "The North Face Wawona 6 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-34",
+                "cluster": "Family camping",
+                "title": "REI Co-op Base Camp 6 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-35",
+                "cluster": "Family camping",
+                "title": "REI Co-op Westward 6 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-36",
+                "cluster": "Family camping",
+                "title": "Big Agnes Bunk House 6 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-37",
+                "cluster": "Family camping",
+                "title": "NEMO Aurora Highrise 6P review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-38",
+                "cluster": "Family camping",
+                "title": "CORE 9-Person Lighted Instant Cabin review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-39",
+                "cluster": "Family camping",
+                "title": "Coleman Skydome XL 8-Person review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-40",
+                "cluster": "Family camping",
+                "title": "Marmot Limestone 6P review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-41",
+                "cluster": "Roof cargo",
+                "title": "Thule Motion 3 XL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-42",
+                "cluster": "Roof cargo",
+                "title": "Thule Motion 3 XL Low review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-43",
+                "cluster": "Roof cargo",
+                "title": "Thule Force 3 XL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-44",
+                "cluster": "Roof cargo",
+                "title": "Yakima SkyBox NX XL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-45",
+                "cluster": "Roof cargo",
+                "title": "Yakima SkyBox 16 Carbonite review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-46",
+                "cluster": "Roof cargo",
+                "title": "Yakima GrandTour 18 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-47",
+                "cluster": "Roof cargo",
+                "title": "Yakima CBX 16 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-48",
+                "cluster": "Roof cargo",
+                "title": "INNO Wedge 660 review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-49",
+                "cluster": "Roof cargo",
+                "title": "Rhino-Rack MasterFit 530L review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-review-50",
+                "cluster": "Roof cargo",
+                "title": "SportRack Vista XL review",
+                "type": "Product review",
+                "intent": "Commercial",
+                "evidence": "Research Review until hands-on evidence exists",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-about",
+                "cluster": "Trust",
+                "title": "About Aleksandar and JustDaddit",
+                "type": "Trust",
+                "intent": "Brand",
+                "evidence": "Approved founder identity",
+                "status": "Built"
+          },
+          {
+                "id": "jd-method",
+                "cluster": "Trust",
+                "title": "How we research and score gear",
+                "type": "Trust",
+                "intent": "Methodology",
+                "evidence": "Versioned editorial standard",
+                "status": "Built"
+          },
+          {
+                "id": "jd-scoring",
+                "cluster": "Trust",
+                "title": "Review scoring policy",
+                "type": "Trust",
+                "intent": "Methodology",
+                "evidence": "Scoring rules",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-disclosure",
+                "cluster": "Trust",
+                "title": "Affiliate disclosure",
+                "type": "Legal",
+                "intent": "Compliance",
+                "evidence": "FTC and program rules",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-corrections",
+                "cluster": "Trust",
+                "title": "Corrections policy",
+                "type": "Trust",
+                "intent": "Policy",
+                "evidence": "Version and correction log",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-contact",
+                "cluster": "Trust",
+                "title": "Contact",
+                "type": "Utility",
+                "intent": "Contact",
+                "evidence": "Founder contact route",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-privacy",
+                "cluster": "Trust",
+                "title": "Privacy policy",
+                "type": "Legal",
+                "intent": "Compliance",
+                "evidence": "US-first policy",
+                "status": "Planned"
+          },
+          {
+                "id": "jd-terms",
+                "cluster": "Trust",
+                "title": "Terms of use",
+                "type": "Legal",
+                "intent": "Compliance",
+                "evidence": "US-first policy",
+                "status": "Planned"
+          }
     ],
     sources: [
       { label: 'r/daddit community and rules', href: 'https://www.reddit.com/r/daddit/', note: '482,000 members shown September 17, 2026; no self-promotion and no AI posts.' },
