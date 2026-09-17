@@ -81,7 +81,7 @@ const PORTFOLIO = [
     risk: 'The Daddit name is strongly associated with Reddit’s fatherhood community, while an overly broad launch would collapse into generic parenting content.',
     gate: 'Confirm the market, clear the name, validate 30 commercial queries, map three viable offer paths, and secure real evidence for the first ten pages.',
     defaultStage: 'Validate', defaultProgress: 12, defaultPages: 0, defaultVisits: 0, defaultClicks: 0, defaultRevenue: 0,
-    nextAction: 'Confirm US-first targeting and inventory the family gear available for real testing.'
+    nextAction: 'Inventory the family gear available for real testing.'
   },
   {
     id: 'creator-studio', rank: 8, name: 'Creator Studio', wave: 2, score: 83, confidence: 61, priority: 'High',
@@ -252,9 +252,11 @@ const WAVES = [
 
 const STAGES = ['Backlog', 'Validate', 'Build', 'Active', 'Scale', 'Hold'];
 const STORAGE_KEY = 'affiliate-kingdom-state-v1';
+const STATE_VERSION = 3;
 const OPERATIONS = window.SITE_OPERATIONS || {};
 const niches = (window.AFFILIATE_NICHES || []).map((item) => item.siteFit === 'family-upgrade' ? { ...item, siteFit: 'justdaddit' } : item);
 const defaultState = {
+  version: STATE_VERSION,
   sites: Object.fromEntries(PORTFOLIO.map((site) => [site.id, {
     stage: site.defaultStage,
     progress: site.defaultProgress,
@@ -298,6 +300,14 @@ function loadState() {
         decisionStatus: { ...merged.operations[id].decisionStatus, ...(saved.operations?.[id]?.decisionStatus || {}) },
       };
     }
+    if (Number(saved.version || 0) < STATE_VERSION) {
+      const justDaddit = merged.operations.justdaddit;
+      if (justDaddit) {
+        justDaddit.completedActions = [...new Set([...justDaddit.completedActions, 'market'])];
+        justDaddit.decisionStatus.market = 'Approved';
+      }
+    }
+    merged.version = STATE_VERSION;
     return merged;
   } catch {
     return structuredClone(defaultState);
@@ -704,7 +714,7 @@ function toggleShortlist(id) {
 }
 
 function exportState() {
-  const payload = { exportedAt: new Date().toISOString(), version: 2, ...state };
+  const payload = { exportedAt: new Date().toISOString(), ...state, version: STATE_VERSION };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
@@ -720,7 +730,7 @@ function importState(file) {
     try {
       const incoming = JSON.parse(reader.result);
       if (!incoming.sites || !Array.isArray(incoming.shortlist)) throw new Error('Invalid dashboard file');
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ sites: incoming.sites, shortlist: incoming.shortlist, operations: incoming.operations || {} }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: Number(incoming.version || 0), sites: incoming.sites, shortlist: incoming.shortlist, operations: incoming.operations || {} }));
       state = loadState();
       renderAll();
     } catch (error) {

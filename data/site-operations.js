@@ -132,7 +132,7 @@ window.SITE_OPERATIONS = {
     ],
     workstreams: [
       { id: 'research', title: 'Market and competitor research', progress: 72, weight: 18, outcome: 'Audience, competitor set, monetization routes, and primary risks are mapped.', next: 'Add keyword and SERP evidence for the first 30 commercial queries.' },
-      { id: 'positioning', title: 'Positioning and brand clearance', progress: 32, weight: 17, outcome: 'The dad-tested family-gear direction is selected; naming confusion remains un-cleared.', next: 'Run formal trademark clearance and add an independence statement before brand investment.' },
+      { id: 'positioning', title: 'Positioning and brand clearance', progress: 36, weight: 17, outcome: 'The dad-tested family-gear direction and US-first market are selected; naming confusion remains un-cleared.', next: 'Run formal trademark clearance and add an independence statement before brand investment.' },
       { id: 'architecture', title: 'Site and product data architecture', progress: 18, weight: 17, outcome: 'Four launch clusters and initial page types are defined.', next: 'Define product IDs, specs, evidence labels, retailer records, and content relationships.' },
       { id: 'evidence', title: 'Testing and evidence system', progress: 8, weight: 18, outcome: 'The evidence ladder is defined, but no launch-product inventory has been logged.', next: 'Inventory owned family gear and recruit three family testers in the target market.' },
       { id: 'build', title: 'Website and content production', progress: 0, weight: 20, outcome: 'No consumer site or launch pages exist yet.', next: 'Build the design system only after the first wedge and market are confirmed.' },
@@ -140,9 +140,9 @@ window.SITE_OPERATIONS = {
     ],
     actions: [
       { id: 'domain-selected', priority: 'Done', title: 'Select JustDaddit as site number two', detail: 'The generic Family Upgrade placeholder is replaced across the portfolio.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
-      { id: 'market', priority: 'P0', title: 'Confirm the launch market', detail: 'Recommended default: US-first English, USD pricing, Amazon US, and direct US programs.', owner: 'Ace', timing: 'Decision needed' },
-      { id: 'clearance', priority: 'P0', title: 'Run formal name and trademark clearance', detail: 'The domain is owned, but Reddit is strongly associated with the term Daddit. This initial screen is not legal clearance.', owner: 'Ace', timing: 'Before logo spend' },
+      { id: 'market', priority: 'Done', title: 'Lock the launch market', detail: 'US-first English is confirmed, using USD pricing, Amazon US, and direct US programs.', owner: 'Ace', timing: 'Complete', defaultComplete: true },
       { id: 'gear-inventory', priority: 'P0', title: 'Inventory products the family can genuinely test', detail: 'List the RC cars, cameras, bikes, scooters, camping gear, travel products, tools, and family technology already available.', owner: 'Ace + Lucija', timing: 'This week' },
+      { id: 'clearance', priority: 'P0', title: 'Run formal name and trademark clearance', detail: 'The domain is owned, but Reddit is strongly associated with the term Daddit. This initial screen is not legal clearance.', owner: 'Ace', timing: 'Before logo spend' },
       { id: 'wedge', priority: 'P0', title: 'Validate the family adventure wedge', detail: 'Score 30 SERPs across ride-and-haul, outdoor play, RC/build projects, and family travel systems.', owner: 'Codex', timing: 'This week' },
       { id: 'testing-panel', priority: 'P1', title: 'Recruit three family testers', detail: 'Use families with children in different age bands. Record product ownership, photos, observations, and conflicts.', owner: 'Ace', timing: 'Before review production' },
       { id: 'brand-system', priority: 'P1', title: 'Approve the identity and editorial promise', detail: 'Keep it practical, warm, and dad-led without macho stereotypes or excluding mothers and grandparents.', owner: 'Ace + Lucija', timing: 'After clearance' },
@@ -152,12 +152,11 @@ window.SITE_OPERATIONS = {
     ],
     blockers: [
       { level: 'Critical', title: 'Name confusion has not been cleared', detail: 'Daddit is the established name of a large Reddit fatherhood community. Use a clear non-affiliation statement and get legal clearance before significant brand spend.' },
-      { level: 'High', title: 'The target market is assumed, not confirmed', detail: 'The plan currently assumes US-first English. Changing market changes products, retailers, prices, and compliance work.' },
       { level: 'High', title: 'Original evidence inventory is unknown', detail: 'A product site without first-hand or clearly labeled independent evidence will be another generic affiliate property.' },
       { level: 'Medium', title: 'The concept can drift into generic parenting', detail: 'The launch rule is strict: cover expensive decisions and repeat-use family systems, not broad parenting advice.' },
     ],
     decisions: [
-      { id: 'market', title: 'Primary market', recommendation: 'US-first English.', status: 'Open', impact: 'Controls retailer programs, currency, keyword research, and product availability.' },
+      { id: 'market', title: 'Primary market', recommendation: 'US-first English, USD pricing, Amazon US, and direct US affiliate programs.', status: 'Approved', impact: 'Controls retailer programs, currency, keyword research, compliance, and product availability.' },
       { id: 'audience', title: 'Starting family stage', recommendation: 'Families with children roughly 3-12.', status: 'Recommended', impact: 'Matches the products and evidence you can access now.' },
       { id: 'wedge', title: 'Opening commercial wedge', recommendation: 'Family adventure, ride-and-haul gear, outdoor play, and build-together projects.', status: 'Recommended', impact: 'Creates a coherent launch without trapping the brand in baby gear.' },
       { id: 'brand-breadth', title: 'Broader brand story', recommendation: 'Keep family-life and dadpreneur stories as a later journal layer, not a launch category.', status: 'Recommended', impact: 'Preserves the original JustDaddit identity without diluting early topical focus.' },
@@ -210,7 +209,7 @@ window.SITE_OPERATIONS = {
       'Every “best” claim must name the use case and the evidence that makes it the best for that use case.',
     ],
     phases: [
-      { id: 'j0', label: 'Phase 0', timing: 'Days 1-3', title: 'Clear the ground', deliverables: ['Confirm US-first market', 'Name and trademark screen', 'Non-affiliation language', 'Owned gear inventory'], gate: 'No unresolved name conflict and at least ten testable products or credible contributor paths.' },
+      { id: 'j0', label: 'Phase 0', timing: 'Days 1-3', title: 'Clear the ground', deliverables: ['US-first market locked', 'Name and trademark screen', 'Non-affiliation language', 'Owned gear inventory'], gate: 'No unresolved name conflict and at least ten testable products or credible contributor paths.' },
       { id: 'j1', label: 'Phase 1', timing: 'Days 4-7', title: 'Validate the wedge', deliverables: ['30 commercial SERP reviews', 'Competitor gap matrix', 'Retailer and affiliate map', 'First ten article briefs'], gate: 'At least 25 viable commercial queries, three monetization paths, and a credible evidence plan.' },
       { id: 'j2', label: 'Phase 2', timing: 'Week 2', title: 'Build the operating system', deliverables: ['Design system', 'Product data model', 'Review and comparison templates', 'Analytics and affiliate events'], gate: 'One benchmark review and one comparison page pass manual editorial, mobile, and performance QA.' },
       { id: 'j3', label: 'Phase 3', timing: 'Weeks 3-4', title: 'Publish the evidence MVP', deliverables: ['Ten excellent pages', 'About and methodology', 'Disclosure and corrections pages', 'First email capture'], gate: 'Every recommendation is traceable to evidence and every commercial action is measured.' },
