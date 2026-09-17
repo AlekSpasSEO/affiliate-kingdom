@@ -20,7 +20,7 @@ const PORTFOLIO = [
     why: 'Strong purchase prices, clear comparison intent, rapidly evolving products, and a large accessory ecosystem.',
     risk: 'Seasonality, manufacturer-led results, and testing requirements can raise content costs.',
     gate: 'Confirm weak SERPs across 30 commercial queries and identify five products that can be tested or sourced.',
-    defaultStage: 'Validate', defaultProgress: 12, defaultPages: 0, defaultVisits: 0, defaultClicks: 0, defaultRevenue: 0,
+    defaultStage: 'Build', defaultProgress: 58, defaultPages: 0, defaultVisits: 0, defaultClicks: 0, defaultRevenue: 0,
     nextAction: 'Score 30 commercial SERPs and map the robot-mower purchase journey.'
   },
   {
@@ -73,15 +73,15 @@ const PORTFOLIO = [
   },
   {
     id: 'justdaddit', rank: 2, name: 'JustDaddit', wave: 1, score: 90, confidence: 61, priority: 'Selected next',
-    tagline: 'Dad-tested family gear for easier days and better adventures.',
-    thesis: 'Help involved parents choose expensive family gear through real use, practical measurements, repairability, and clear fit by child, home, car, trip, and budget.',
-    buyer: 'Parents and grandparents buying durable gear for children roughly 3-12, with an initial focus on family adventure, ride-and-haul systems, outdoor play, and build-together projects.',
-    clusters: ['Ride and haul', 'Outdoor play', 'Build together', 'Creative tech', 'Family travel'],
-    why: 'The domain is owned, 57 relevant niches are already mapped, and the founder can document real family workflows instead of manufacturing generic review claims.',
+    tagline: 'Research-backed gear for family adventures, projects, travel, and outdoor play.',
+    thesis: 'Help parents choose expensive family gear through transparent evidence, realistic starting cost, repairability, compatibility, and clear best-for and skip-if guidance.',
+    buyer: 'US parents and grandparents buying durable gear for children roughly 4-12 across RC, ride-ons, backyard play, camping, and road trips.',
+    clusters: ['RC cars', 'Ride-ons', 'Backyard play', 'Family camping', 'Roof cargo'],
+    why: 'The domain is owned, the 69-page launch map is approved, and the founder identity plus transparent Research Review model give the brand a credible starting point.',
     risk: 'The Daddit name is strongly associated with Reddit’s fatherhood community, while an overly broad launch would collapse into generic parenting content.',
-    gate: 'Confirm the market, clear the name, validate 30 commercial queries, map three viable offer paths, and secure real evidence for the first ten pages.',
+    gate: 'Publish and visually approve the six-page prototype, clear the name, structure the first ten product records, and validate the benchmark batch before scaling.',
     defaultStage: 'Validate', defaultProgress: 12, defaultPages: 0, defaultVisits: 0, defaultClicks: 0, defaultRevenue: 0,
-    nextAction: 'Inventory the family gear available for real testing.'
+    nextAction: 'Create the empty public justdaddit repository, then publish and visually QA the six-page prototype.'
   },
   {
     id: 'creator-studio', rank: 8, name: 'Creator Studio', wave: 2, score: 83, confidence: 61, priority: 'High',
@@ -252,7 +252,7 @@ const WAVES = [
 
 const STAGES = ['Backlog', 'Validate', 'Build', 'Active', 'Scale', 'Hold'];
 const STORAGE_KEY = 'affiliate-kingdom-state-v1';
-const STATE_VERSION = 3;
+const STATE_VERSION = 4;
 const OPERATIONS = window.SITE_OPERATIONS || {};
 const niches = (window.AFFILIATE_NICHES || []).map((item) => item.siteFit === 'family-upgrade' ? { ...item, siteFit: 'justdaddit' } : item);
 const defaultState = {
@@ -303,8 +303,34 @@ function loadState() {
     if (Number(saved.version || 0) < STATE_VERSION) {
       const justDaddit = merged.operations.justdaddit;
       if (justDaddit) {
-        justDaddit.completedActions = [...new Set([...justDaddit.completedActions, 'market'])];
-        justDaddit.decisionStatus.market = 'Approved';
+        justDaddit.completedActions = [...new Set([
+          ...justDaddit.completedActions,
+          'domain-selected',
+          'market',
+          'hubs-approved',
+          'identity-approved',
+          'brand-system',
+          'prototype',
+        ])];
+        justDaddit.decisionStatus = {
+          ...justDaddit.decisionStatus,
+          market: 'Approved',
+          audience: 'Approved',
+          wedge: 'Approved',
+          identity: 'Approved',
+          'evidence-model': 'Approved',
+          'brand-breadth': 'Approved',
+        };
+        justDaddit.workstreamProgress = {
+          ...justDaddit.workstreamProgress,
+          research: 82,
+          positioning: 90,
+          architecture: 68,
+          evidence: 72,
+          build: 28,
+          monetization: 8,
+        };
+        justDaddit.updatedAt = '2026-09-17T21:39:00.000Z';
       }
     }
     merged.version = STATE_VERSION;
