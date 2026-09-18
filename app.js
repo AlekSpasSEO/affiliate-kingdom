@@ -79,9 +79,9 @@ const PORTFOLIO = [
     clusters: ['RC cars', 'Ride-ons', 'Backyard play', 'Family camping', 'Roof cargo'],
     why: 'The domain is owned, the 69-page launch map is approved, and the founder identity plus transparent Research Review model give the brand a credible starting point.',
     risk: 'The Daddit name is strongly associated with Reddit’s fatherhood community, while an overly broad launch would collapse into generic parenting content.',
-    gate: 'Publish and visually approve the six-page prototype, clear the name, structure the first ten product records, and validate the benchmark batch before scaling.',
-    defaultStage: 'Validate', defaultProgress: 12, defaultPages: 0, defaultVisits: 0, defaultClicks: 0, defaultRevenue: 0,
-    nextAction: 'Create the empty public justdaddit repository, then publish and visually QA the six-page prototype.'
+    gate: 'Visually approve the live six-page prototype on desktop and mobile, clear the name, structure the first ten product records, and validate the benchmark batch before scaling.',
+    defaultStage: 'Build', defaultProgress: 63, defaultPages: 6, defaultVisits: 0, defaultClicks: 0, defaultRevenue: 0,
+    nextAction: 'Complete the mobile visual pass, then structure the first ten product records.'
   },
   {
     id: 'creator-studio', rank: 8, name: 'Creator Studio', wave: 2, score: 83, confidence: 61, priority: 'High',
@@ -252,7 +252,7 @@ const WAVES = [
 
 const STAGES = ['Backlog', 'Validate', 'Build', 'Active', 'Scale', 'Hold'];
 const STORAGE_KEY = 'affiliate-kingdom-state-v1';
-const STATE_VERSION = 4;
+const STATE_VERSION = 5;
 const OPERATIONS = window.SITE_OPERATIONS || {};
 const niches = (window.AFFILIATE_NICHES || []).map((item) => item.siteFit === 'family-upgrade' ? { ...item, siteFit: 'justdaddit' } : item);
 const defaultState = {
@@ -301,6 +301,13 @@ function loadState() {
       };
     }
     if (Number(saved.version || 0) < STATE_VERSION) {
+      const justDadditSite = merged.sites.justdaddit;
+      if (justDadditSite) {
+        justDadditSite.stage = 'Build';
+        justDadditSite.progress = Math.max(Number(justDadditSite.progress || 0), 63);
+        justDadditSite.pages = Math.max(Number(justDadditSite.pages || 0), 6);
+        justDadditSite.nextAction = 'Complete the mobile visual pass, then structure the first ten product records.';
+      }
       const justDaddit = merged.operations.justdaddit;
       if (justDaddit) {
         justDaddit.completedActions = [...new Set([
@@ -311,6 +318,7 @@ function loadState() {
           'identity-approved',
           'brand-system',
           'prototype',
+          'repository',
         ])];
         justDaddit.decisionStatus = {
           ...justDaddit.decisionStatus,
@@ -327,10 +335,10 @@ function loadState() {
           positioning: 90,
           architecture: 68,
           evidence: 72,
-          build: 28,
+          build: 46,
           monetization: 8,
         };
-        justDaddit.updatedAt = '2026-09-17T21:39:00.000Z';
+        justDaddit.updatedAt = '2026-09-18T09:48:00.000Z';
       }
     }
     merged.version = STATE_VERSION;
